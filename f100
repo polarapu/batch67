@@ -1,0 +1,9 @@
+heloifjdslkf
+fdsfjdsjkf
+ffndskfjdsf
+git init
+ls -a
+git config --global user.name "Polarapu Prasad"
+git config --global user.email "devopstraining2015@gmail.com"
+git config --list
+
