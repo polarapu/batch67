@@ -72,3 +72,169 @@ rm -rf file-name
 git add .
 git commit -m "label"
 git push
+
+--------------------------------
+touch, cat, vi
+---------------
+
+touch file1
+touch file2 file3 file4
+
+cat 
+---
+cat > file5
+...
+...
+ctrl+d
+
+cat file5
+
+cat >> file5
+...
+...
+ctrl+d
+
+Vi file6
+---------
+esc i
+.....
+.....
+.....
+esc :w!
+esc :q!
+or
+esc :wq!
+
+
+Log's
+======
+
+git log
+git log -n
+git log --oneline
+git log --oneline -5
+git log --author=Prasad
+git log --author=Prasad -n
+git log --author=Prasad --oneline
+git log --author=Prasad --oneline -n
+
+git log --since=yy-mm-dd
+or
+git log --after=yy-mm-dd
+
+git log --until=yy-mm-dd
+or
+git log --before=yy-mm-dd
+
+git log --after="yy-mm-dd" --before="yy-mm-dd"
+or
+git log --since=yy-mm-dd --until=yy-mm-dd
+git log --after="yy-mm-dd 8:00" --before="yy-mm-dd 7:00"
+
+git log --grep="msg"
+git log -- file.txt
+
+git commit -m "label1" -m "label2" -m "label3"
+
+
+BRANCH
+======
+git branch
+git branch branch-name
+or
+git checkout -b branch-name
+
+git branch
+git checkout branch-name
+git merge branch-name
+git cherry-pick cid  ( one commit from one branch to another branch )
+git branch -d branch-name  (local repo)
+
+
+git push origin branch-name
+or
+git push path/of/c-repo branch-name
+
+git push origin -d branch-name (central repo)
+
+
+Alias
+-----
+git status
+git config --global alias.s "status"
+git s
+
+git log
+git config --global alias.l "log"
+git l
+
+git log --oneline
+git config --global alias.l1 "log --oneline"
+git l1
+
+git commit -m "Test commit" 
+git config --global alias.c "commit -m "test commit""
+git c
+
+git config --list
+
+git config --global --unset alias.l
+git config --global --unset alias.c
+
+git config --global --unset user.name
+
+
+TAG's
+======
+git tag
+git tag T-1.0
+git show T-1.0
+git tag -d T-1.0
+
+git tag T-1.0 cid
+git checkout t-1.0
+
+git push origin T-1.0
+git push --tags
+git push origin -d T-1.0
+
+STASH
+=====
+git stash list
+git stash save "stash1"
+
+git stash show stash@{0}
+git stash show -p stash@{0}
+
+POP - cut
+----------
+git stash pop
+git stash pop stash@{x}
+
+APPLY - copy
+-------------
+git stash apply
+git stash apply stash@{x}
+
+DROP - delete
+--------------
+git stash drop
+git stash drop stash@{x}
+
+
+.gitignore
+===========
+file1
+file2
+
+git status
+
+Revert
+-------
+git revert cid
+
+Amend
+
+
+Bitbucket
+
